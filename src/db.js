@@ -99,18 +99,6 @@ export const CATEGORIES = [
   { id: "footwear", label: "Footwear", icon: "footprints" },
 ];
 
-/* Builds a set of deterministic placeholder photos per product so every
-   card/detail page has real images without depending on any external
-   catalog. Swap these for real product photography URLs whenever ready —
-   nothing else in the app needs to change. */
-const placeholderImages = (seed, count = 4) =>
-  Array.from({ length: count }, (_, i) => `https://picsum.photos/seed/jasbela-${seed}-${i}/900/900`);
-
-/* ---------------- Product catalog ----------------
-   category must match one of the CATEGORIES ids above (except "all")
-   tag: "new" | "sale" | null
-   images: array of photo URLs, first one is used as the card thumbnail
-   description: shown on the product details page                    */
 export const PRODUCTS = [
   { id: 1, name: "Silk Wrap Midi Dress", category: "clothing", price: 4999, oldPrice: null, rating: 4.7, tag: "new", images: [cloth1, cloth2, cloth3, cloth4, cloth5], description: "A fluid silk midi cut for effortless movement, finished with a self-tie wrap waist that flatters every silhouette." },
   { id: 2, name: "Embroidered Anarkali Gown", category: "clothing", price: 7499, oldPrice: 9999, rating: 4.8, tag: "sale", images: [cloth2, cloth3, cloth4, cloth5, cloth1], description: "Hand-embroidered florals cascade down a floor-length Anarkali silhouette — statement dressing for celebrations." },
