@@ -1,11 +1,11 @@
+import { StoreProvider } from "./Header.jsx";
+import Home from "./Home.jsx";
 
-import Home from "./Home";
-function App() {
+export default function App() {
   return (
-   <>
-    <Home/>
-   </>
+    <StoreProvider>
+      <Home />
+      {/* any other page components go here too, all share the same cart/wishlist */}
+    </StoreProvider>
   );
 }
-
-export default App;
