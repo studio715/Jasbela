@@ -7,11 +7,11 @@ import cloth3 from "./Images/cloth3.jpeg";
 import cloth4 from "./Images/cloth4.jpeg";
 import cloth5 from "./Images/cloth5.jpeg";
 
-import groom1 from "./Images/groom1.jpeg";
-import groom2 from "./Images/groom2.jpeg";
-import groom3 from "./Images/groom3.jpeg";
-import groom4 from "./Images/groom4.jpeg";
-import groom5 from "./Images/groom5.jpeg";
+import makeup1 from "./Images/makeup1.jpeg";
+import makeup2 from "./Images/makeup2.jpeg";
+import makeup3 from "./Images/makeup3.jpeg";
+import makeup4 from "./Images/makeup4.jpeg";
+import makeup5 from "./Images/makeup5.jpeg";
 
 import jew1 from "./Images/jew1.jpeg";
 import jew2 from "./Images/jew2.jpeg";
@@ -30,6 +30,12 @@ import bag2 from "./Images/bag2.jpeg";
 import bag3 from "./Images/bag3.jpeg";
 import bag4 from "./Images/bag4.jpeg";
 import bag5 from "./Images/bag5.jpeg";
+
+import watch1 from "./Images/watch1.jpeg";
+import watch2 from "./Images/watch2.jpeg";
+import watch3 from "./Images/watch3.jpeg";
+import watch4 from "./Images/watch4.jpeg";
+import watch5 from "./Images/watch5.jpeg";
 /* ---------------- Theme ---------------- */
 export const THEME = {
   bg: "#FBF9F3",
@@ -44,7 +50,7 @@ export const THEME = {
   rose: "#A85D50",  
 };
 /* ---------------- Hero background slideshow ---------------- */
-export const HERO_IMAGES = [cloth1,groom1,jew1,foot1,bag1];
+export const HERO_IMAGES = [cloth1,makeup1,jew1,foot1,bag1, watch1];
 /* ---------------- Site-wide copy ---------------- */
 export const SITE = {
   name: "JASBELA",
@@ -57,7 +63,7 @@ export const SITE = {
     titleLine1: "Adorn every",
     titleLine2: "layer of you",
     subtitle:
-      "From tailored silhouettes to fine jewelry and quiet luxury grooming — a wardrobe built around you, curated in one place.",
+      "From tailored silhouettes to fine jewelry and quiet luxury makeup — a wardrobe built around you, curated in one place.",
     primaryCta: "Shop new arrivals",
     secondaryCta: "Explore all",
   },
@@ -66,12 +72,12 @@ export const SITE = {
     heading:
       "Every piece chosen for the woman who layers meaning into what she wears",
     body:
-      "Small-batch clothing, fine jewelry and considered grooming — sourced with the same care as the mark we sign it with.",
+      "Small-batch clothing, fine jewelry and considered makeup — sourced with the same care as the mark we sign it with.",
   },
 
   footer: {
-    description: "Clothing, jewelry and grooming for every layer of her world.",
-    shopLinks: ["Clothing", "Jewelry", "Grooming", "Bags", "Footwear"],
+    description: "Clothing, jewelry and makeup for every layer of her world.",
+    shopLinks: ["Clothing", "Jewelry", "Makeup", "Bags", "Footwear", "Watches"],
     helpLinks: ["Shipping", "Returns", "Size guide", "Contact us"],
     newsletterHeading: "Stay in touch",
     newsletterText: "New arrivals and quiet sales, sent occasionally.",
@@ -83,14 +89,15 @@ export const SITE = {
 };
 
 /* ---------------- Nav / filter categories ----------------
-   `icon` refers to a key in ICON_COMPONENTS (see JasbelaStore.jsx) */
+   `icon` refers to a key in ICON_COMPONENTS (see Home.jsx) */
 export const CATEGORIES = [
   { id: "all", label: "All", icon: "sparkles" },
   { id: "clothing", label: "Clothing", icon: "shirt" },
   { id: "jewelry", label: "Jewelry", icon: "gem" },
-  { id: "grooming", label: "Grooming", icon: "sparkles" },
+  { id: "makeup", label: "Makeup", icon: "sparkles" },
   { id: "bags", label: "Bags", icon: "shopping-bag" },
   { id: "footwear", label: "Footwear", icon: "footprints" },
+  {id:  "watches", label: "Watch", icon: "watch" },
 ];
 
 export const PRODUCTS = [
@@ -104,10 +111,10 @@ export const PRODUCTS = [
   { id: 7, name: "Layered Chain Bracelet", category: "jewelry", price: 2299, oldPrice: null, rating: 4.4, tag: "new", images: [jew3,jew4,jew5,jew1,jew2], description: "Three fine chains layered onto a single clasp, designed to stack beautifully with your other pieces." },
   { id: 8, name: "Diamond Cut Nose Pin", category: "jewelry", price: 1299, oldPrice: null, rating: 4.3, tag: null, images: [jew4,jew5,jew1,jew2,jew3], description: "A tiny diamond-cut stud that catches light from every angle — subtle sparkle for daily wear." },
   
-  { id: 9, name: "Rose Gold Hair Serum", category: "grooming", price: 899, oldPrice: null, rating: 4.5, tag: null, images: [groom1,groom2,groom3,groom4,groom5], description: "A lightweight serum that smooths frizz and adds shine without weighing hair down." },
-  { id: 10, name: "Vitamin C Radiance Cream", category: "grooming", price: 1199, oldPrice: null, rating: 4.7, tag: "new", images: [groom2,groom3,groom4,groom5,groom1], description: "A daily brightening cream formulated with stabilized Vitamin C to even tone and boost radiance." },
-  { id: 11, name: "Silk Press Hair Straightener", category: "grooming", price: 3499, oldPrice: 4299, rating: 4.6, tag: "sale", images: [groom3,groom4,groom5,groom1,groom2], description: "Ceramic plates deliver a smooth, salon-finish press while protecting hair from heat damage." },
-  { id: 12, name: "Luxury Perfume Oil Duo", category: "grooming", price: 2199, oldPrice: null, rating: 4.8, tag: null, images: [groom4,groom5,groom1,groom2,groom3], description: "Two long-lasting perfume oils, alcohol-free and gentle on skin, in a travel-friendly duo." },
+  { id: 9, name: "Rose Gold Hair Serum", category: "makeup", price: 899, oldPrice: null, rating: 4.5, tag: null, images: [makeup1,makeup2,makeup3,makeup4,makeup5], description: "A lightweight serum that smooths frizz and adds shine without weighing hair down." },
+  { id: 10, name: "Vitamin C Radiance Cream", category: "makeup", price: 1199, oldPrice: null, rating: 4.7, tag: "new", images: [makeup2,makeup3,makeup4,makeup5,makeup1], description: "A daily brightening cream formulated with stabilized Vitamin C to even tone and boost radiance." },
+  { id: 11, name: "Silk Press Hair Straightener", category: "makeup", price: 3499, oldPrice: 4299, rating: 4.6, tag: "sale", images: [makeup3,makeup4,makeup5,makeup1,makeup2], description: "Ceramic plates deliver a smooth, salon-finish press while protecting hair from heat damage." },
+  { id: 12, name: "Luxury Perfume Oil Duo", category: "makeup", price: 2199, oldPrice: null, rating: 4.8, tag: null, images: [makeup4,makeup5,makeup1,makeup2,makeup3], description: "Two long-lasting perfume oils, alcohol-free and gentle on skin, in a travel-friendly duo." },
   
   { id: 13, name: "Structured Handbag", category: "bags", price: 4499, oldPrice: null, rating: 4.5, tag: null, images: [bag1,bag2,bag3,bag4,bag5], description: "A structured silhouette with a top handle and detachable strap — takes you from desk to dinner." },
   { id: 14, name: "Embroidered Potli Clutch", category: "bags", price: 2799, oldPrice: null, rating: 4.4, tag: "new", images: [bag2,bag3,bag4,bag5,bag1], description: "A hand-embroidered potli clutch on a drawstring closure, sized for the essentials only." },
@@ -115,6 +122,39 @@ export const PRODUCTS = [
   
   { id: 16, name: "Embellished Block Heels", category: "footwear", price: 3299, oldPrice: null, rating: 4.3, tag: null, images: [foot1, foot2, foot3, foot4, foot5], description: "A comfortable block heel dressed up with hand-placed embellishments across the strap." },
   {id: 17,name: "Pearl Strap Kitten Heels",category: "footwear",price: 2899,oldPrice: 3499,rating: 4.5,tag: "Sale",images: [foot2, foot3, foot4, foot5, foot1],description: "Elegant kitten heels featuring delicate pearl-embellished straps, designed for effortless comfort and festive occasions."},
-  {id: 18,name: "Embroidered Festive Juttis",category: "footwear",price: 2199,oldPrice: 2799,rating: 4.6,tag: "New",images: [foot3, foot4, foot5, foot1, foot2],description: "Traditional handcrafted juttis adorned with intricate embroidery and subtle embellishments for a refined ethnic look."
+  {id: 18,name: "Embroidered Festive Juttis",category: "footwear",price: 2199,oldPrice: 2799,rating: 4.6,tag: "New",images: [foot3, foot4, foot5, foot1, foot2],description: "Traditional handcrafted juttis adorned with intricate embroidery and subtle embellishments for a refined ethnic look."},
+
+{
+  id: 19,
+  name: "Classic Rose Gold Watch",
+  category: "watches",
+  price: 3499,
+  oldPrice: 4299,
+  rating: 4.7,
+  tag: "Bestseller",
+  images: [watch1, watch2, watch3, watch4, watch5],
+  description: "An elegant rose gold timepiece featuring a minimalist dial and refined metallic strap for a timeless everyday look."
+},
+{
+  id: 20,
+  name: "Emerald Dial Luxury Watch",
+  category: "watches",
+  price: 4299,
+  oldPrice: 5299,
+  rating: 4.8,
+  tag: "New",
+  images: [watch2, watch3, watch4, watch5, watch1],
+  description: "A statement luxury watch featuring a rich emerald green dial, polished detailing, and a sophisticated bracelet-style strap."
+},
+{
+  id: 21,
+  name: "Crystal Embellished Bracelet Watch",
+  category: "watches",
+  price: 3899,
+  oldPrice: 4799,
+  rating: 4.6,
+  tag: "Trending",
+  images: [watch3, watch4, watch5, watch1, watch2],
+  description: "A graceful bracelet watch adorned with delicate crystal embellishments, designed to add effortless sparkle to festive and evening looks."
 },
 ];

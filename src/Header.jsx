@@ -2,7 +2,7 @@
 import React, { createContext, useContext, useEffect, useRef, useState } from "react";
 import {
   Menu, X, Search, Heart, ShoppingCart, User, Plus, Minus, Trash2, Check,
-  Shirt, Gem, Sparkles, ShoppingBag, Footprints,
+  Shirt, Gem, Sparkles, ShoppingBag, Footprints, Watch,
 } from "lucide-react";
 import { THEME as COLORS, SITE, CATEGORIES, PRODUCTS } from "./db.js";
 import { currency } from "./utils.js";
@@ -13,6 +13,7 @@ const ICON_COMPONENTS = {
   gem: Gem,
   "shopping-bag": ShoppingBag,
   footprints: Footprints,
+  watch: Watch,
 };
 
 /* ---------------------------------------------------------------

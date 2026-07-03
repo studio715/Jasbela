@@ -224,8 +224,6 @@ export default function JasbelaStore() {
   );
 }
 
-/* Bridges ProductDetails (prop-driven) to the shared store, so cart/wishlist
-   clicks inside the modal update the same state everything else uses. */
 function ProductDetailsWrapper({ product, onClose }) {
   const { cart, addToCart, changeQty, wishlist, toggleWishlist } = useStore();
   return (
