@@ -3,7 +3,7 @@ import {
   Heart, ShoppingCart, Star, ChevronRight, Mail,
 } from "lucide-react";
 
-import { THEME as COLORS, SITE, CATEGORIES, PRODUCTS, HERO_IMAGES } from "./db.js";
+import { THEME as COLORS, SITE, PRODUCTS, HERO_IMAGES } from "./db.js";
 import { currency } from "./utils.js";
 import Header, { useStore } from "./Header.jsx";
 import ProductDetails from "./ProductDetails.jsx";
@@ -54,13 +54,11 @@ export default function JasbelaStore() {
     query,
     wishlist, toggleWishlist,
     addToCart,
-    setSelectedProductId: _unused, // not used here — kept out intentionally
   } = useStore();
 
   const [maxPrice, setMaxPrice] = React.useState(9999);
   const [onlyNew, setOnlyNew] = React.useState(false);
   const [onlySale, setOnlySale] = React.useState(false);
-  const [filterOpen, setFilterOpen] = React.useState(false);
   const [sortBy, setSortBy] = React.useState("featured");
   const [selectedProductId, setSelectedProductId] = React.useState(null);
   const [heroIndex, setHeroIndex] = React.useState(0);
