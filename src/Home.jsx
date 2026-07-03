@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import {
-  Heart, ShoppingCart, Star, ChevronRight, Mail,
+  Heart, ShoppingCart, Star, ChevronRight, Mail, ArrowUpDown,
 } from "lucide-react";
 
 import { THEME as COLORS, SITE, PRODUCTS, HERO_IMAGES } from "./db.js";
@@ -267,14 +267,18 @@ function FilterPanel({ maxPrice, setMaxPrice, onlyNew, setOnlyNew, onlySale, set
 
 function SortSelect({ sortBy, setSortBy }) {
   return (
-    <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}
-      style={{ appearance: "none", background: "transparent", border: `1px solid ${COLORS.line}`, color: COLORS.ivory, padding: "8px 32px 8px 14px", borderRadius: 2, fontSize: 12, cursor: "pointer", fontFamily: "Jost" }}>
-      <option style={{ background: COLORS.surface }} value="featured">Featured</option>
-      <option style={{ background: COLORS.surface }} value="price-asc">Price: low to high</option>
-      <option style={{ background: COLORS.surface }} value="price-desc">Price: high to low</option>
-      <option style={{ background: COLORS.surface }} value="rating">Top rated</option>
-      <option style={{ background: COLORS.surface }} value="new">Newest</option>
-    </select>
+    <div style={{ position: "relative", display: "inline-flex", alignItems: "center" }}>
+      <ArrowUpDown size={13} strokeWidth={1.6} color={COLORS.gold}
+        style={{ position: "absolute", left: 12, pointerEvents: "none" }} />
+      <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}
+        style={{ appearance: "none", background: "transparent", border: `1px solid ${COLORS.line}`, color: COLORS.ivory, padding: "8px 32px 8px 34px", borderRadius: 2, fontSize: 12, cursor: "pointer", fontFamily: "Jost" }}>
+        <option style={{ background: COLORS.surface }} value="featured">Featured</option>
+        <option style={{ background: COLORS.surface }} value="price-asc">Price: low to high</option>
+        <option style={{ background: COLORS.surface }} value="price-desc">Price: high to low</option>
+        <option style={{ background: COLORS.surface }} value="rating">Top rated</option>
+        <option style={{ background: COLORS.surface }} value="new">Newest</option>
+      </select>
+    </div>
   );
 }
 

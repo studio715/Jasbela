@@ -43,10 +43,9 @@ export default function ProductDetails({
   const fullRating = Math.round(product.rating);
 
   return (
-    
+    <>
     <div style={{ position: "fixed", inset: 0, zIndex: 90, display: "flex", justifyContent: "center", alignItems: "flex-start" }}>
              
-             <Header />
       <div onClick={onClose} style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.6)" }} />
 
         <div
@@ -155,5 +154,6 @@ export default function ProductDetails({
         </div>
       </div>
     </div>
+    </>
   );
 }
