@@ -44,13 +44,7 @@ export const THEME = {
   rose: "#A85D50",  
 };
 /* ---------------- Hero background slideshow ---------------- */
-export const HERO_IMAGES = [
-  "/images/banner1.jpeg",
-  "/images/banner2.jpeg",
-  "/images/banner3.jpeg",
-  "/images/banner4.jpeg",
-  "/images/banner5.jpeg",
-];
+export const HERO_IMAGES = [cloth1,groom1,jew1,foot1,bag1];
 /* ---------------- Site-wide copy ---------------- */
 export const SITE = {
   name: "JASBELA",
