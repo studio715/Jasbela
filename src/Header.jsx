@@ -113,12 +113,12 @@ const CategoryGlyph = ({ category, size = 24 }) => {
    props: <Header />. It reads/writes everything through useStore().
 ================================================================= */
 export default function Header({ showCategoryRail = true }) {
-  const {
-    category, setCategory, setQuery,
-    cartCount, wishlistCount,
-    cartOpen, setCartOpen,
-    wishlistOpen, setWishlistOpen,
-  } = useStore();
+const {
+  category, setCategory, setQuery,
+  cartCount, wishlistCount,
+  setCartOpen,
+  setWishlistOpen,
+} = useStore();
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
