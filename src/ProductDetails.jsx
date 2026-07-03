@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { X, Heart, ShoppingCart, Plus, Minus, Star } from "lucide-react";
 import { THEME as COLORS } from "./db.js";
 import { currency, CATEGORY_DETAILS, DELIVERY_NOTE } from "./utils.js"; 
-import Header from "./Header.jsx";
 /* ---------------------------------------------------------------
    ProductDetails — full-screen overlay shown when a product card
    is clicked. Own component, driven entirely by props so it has
