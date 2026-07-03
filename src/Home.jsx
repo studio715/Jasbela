@@ -6,15 +6,6 @@ import {
   Mail, ChevronRight
 } from "lucide-react";
 
-/* ---------------------------------------------------------------
-   JASBELA — single page storefront
-   Palette drawn from the brand mark: ivory ground, warm antique
-   gold, deep ink type, a whisper of blush for sale/new accents.
-   NOTE: `ivory` below is repurposed as the primary TEXT color
-   (dark ink) now that the theme is light — key name kept for
-   minimal diff across the file.
---------------------------------------------------------------- */
-
 const COLORS = {
   bg: "#FBF9F3",
   surface: "#FFFFFF",
@@ -551,12 +542,12 @@ function ProductCard({ product, onAdd }) {
           <CategoryGlyph category={product.category} size={54} />
         </div>
         {product.tag && (
-          <span style={{ position: "absolute", top: 10, left: 10, fontSize: 10.5, letterSpacing: "0.08em", textTransform: "uppercase", padding: "4px 9px", borderRadius: 2, background: product.tag === "sale" ? COLORS.rose : COLORS.gold, color: "#1A1310" }}>
+          <span style={{ position: "absolute", top: 10, left: 10, fontSize: 10.5, letterSpacing: "0.08em", textTransform: "uppercase", padding: "4px 9px", borderRadius: 2, background: product.tag === "sale" ? COLORS.rose : COLORS.gold, color: "#ffffff" }}>
             {product.tag === "sale" ? "Sale" : "New"}
           </span>
         )}
         <button onClick={() => setWish((w) => !w)} aria-label="Toggle wishlist"
-          style={{ position: "absolute", top: 8, right: 8, background: "rgba(10,9,8,0.55)", border: "none", borderRadius: "50%", width: 30, height: 30, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}>
+          style={{ position: "absolute", top: 8, right: 8, background: "rgba(255, 255, 255, 0.55)", border: "none", borderRadius: "50%", width: 30, height: 30, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}>
           <Heart size={14} strokeWidth={1.5} fill={wish ? COLORS.rose : "none"} color={wish ? COLORS.rose : COLORS.ivory} />
         </button>
         <button onClick={onAdd} className="jb-card-add"
