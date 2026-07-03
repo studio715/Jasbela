@@ -2,11 +2,11 @@
 import React, { createContext, useContext, useEffect, useRef, useState } from "react";
 import {
   Menu, X, Search, Heart, ShoppingCart, User, Plus, Minus, Trash2, Check,
-  Shirt, Gem, Sparkles, ShoppingBag, Footprints, Watch,
+  Shirt, Gem, Sparkles, ShoppingBag, Footprints, Watch,  Brush
 } from "lucide-react";
 import { THEME as COLORS, SITE, CATEGORIES, PRODUCTS } from "./db.js";
 import { currency } from "./utils.js";
-
+import { LogoLockup } from "./LogoMark.jsx";
 const ICON_COMPONENTS = {
   sparkles: Sparkles,
   shirt: Shirt,
@@ -14,13 +14,9 @@ const ICON_COMPONENTS = {
   "shopping-bag": ShoppingBag,
   footprints: Footprints,
   watch: Watch,
+  brush: Brush,
 };
 
-/* ---------------------------------------------------------------
-   Shared store — cart, wishlist, category, search — lives here so
-   ANY page can read/write it via useStore(), and <Header /> needs
-   zero props to be fully functional everywhere.
---------------------------------------------------------------- */
 const StoreContext = createContext(null);
 
 export function StoreProvider({ children }) {
@@ -161,7 +157,7 @@ const {
       `}</style>
 
       {/* Header */}
-      <header style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 95, background: "rgba(251,249,243,0.98)", backdropFilter: "blur(6px)", borderBottom: `1px solid ${COLORS.line}`, width: "100%" }}>
+      <header style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 95, background: "rgba(251,249,243,0.98)", backdropFilter: "blur(6px)", borderBottom: `1px solid ${COLORS.line}`, width: "100%", overflowX: "hidden" }}>
         <div style={{ background: COLORS.surface, borderBottom: `1px solid ${COLORS.line}`, textAlign: "center", padding: "6px 12px", fontSize: 10, letterSpacing: "0.12em", textTransform: "uppercase", color: COLORS.gold }}>
           {SITE.announcement}
         </div>
@@ -171,9 +167,10 @@ const {
             <Menu size={22} strokeWidth={1.4} />
           </button>
 
-          <a href="/" style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer", flex: 1, minWidth: 0, textDecoration: "none" }}>
-            <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(23px, 5vw, 26px)", letterSpacing: "0.18em", color: COLORS.gold, fontWeight: 600, whiteSpace: "nowrap" }}>{SITE.name}</span>
-          </a>
+        <a href="/" style={{ display: "flex", alignItems: "center", gap: 10, cursor: "pointer", flex: 1, minWidth: 0, textDecoration: "none", overflow: "hidden" }}
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+        <LogoLockup height={30} />
+        </a>
 
           <nav className="jb-desktop-only" style={{ display: "flex", gap: 28 }}>
             {navLinks.map((c) => (

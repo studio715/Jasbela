@@ -94,7 +94,7 @@ export const CATEGORIES = [
   { id: "all", label: "All", icon: "sparkles" },
   { id: "clothing", label: "Clothing", icon: "shirt" },
   { id: "jewelry", label: "Jewelry", icon: "gem" },
-  { id: "makeup", label: "Makeup", icon: "sparkles" },
+  { id: "makeup", label: "Makeup", icon: "brush" },
   { id: "bags", label: "Bags", icon: "shopping-bag" },
   { id: "footwear", label: "Footwear", icon: "footprints" },
   {id:  "watches", label: "Watch", icon: "watch" },
@@ -124,37 +124,7 @@ export const PRODUCTS = [
   {id: 17,name: "Pearl Strap Kitten Heels",category: "footwear",price: 2899,oldPrice: 3499,rating: 4.5,tag: "Sale",images: [foot2, foot3, foot4, foot5, foot1],description: "Elegant kitten heels featuring delicate pearl-embellished straps, designed for effortless comfort and festive occasions."},
   {id: 18,name: "Embroidered Festive Juttis",category: "footwear",price: 2199,oldPrice: 2799,rating: 4.6,tag: "New",images: [foot3, foot4, foot5, foot1, foot2],description: "Traditional handcrafted juttis adorned with intricate embroidery and subtle embellishments for a refined ethnic look."},
 
-{
-  id: 19,
-  name: "Classic Rose Gold Watch",
-  category: "watches",
-  price: 3499,
-  oldPrice: 4299,
-  rating: 4.7,
-  tag: "Bestseller",
-  images: [watch1, watch2, watch3, watch4, watch5],
-  description: "An elegant rose gold timepiece featuring a minimalist dial and refined metallic strap for a timeless everyday look."
-},
-{
-  id: 20,
-  name: "Emerald Dial Luxury Watch",
-  category: "watches",
-  price: 4299,
-  oldPrice: 5299,
-  rating: 4.8,
-  tag: "New",
-  images: [watch2, watch3, watch4, watch5, watch1],
-  description: "A statement luxury watch featuring a rich emerald green dial, polished detailing, and a sophisticated bracelet-style strap."
-},
-{
-  id: 21,
-  name: "Crystal Embellished Bracelet Watch",
-  category: "watches",
-  price: 3899,
-  oldPrice: 4799,
-  rating: 4.6,
-  tag: "Trending",
-  images: [watch3, watch4, watch5, watch1, watch2],
-  description: "A graceful bracelet watch adorned with delicate crystal embellishments, designed to add effortless sparkle to festive and evening looks."
-},
+  {id: 19,name: "Classic Rose Gold Watch",category: "watches",price: 3499,oldPrice: 4299,rating: 4.7,tag: "Bestseller",images: [watch1, watch2, watch3, watch4, watch5],description: "An elegant rose gold timepiece featuring a minimalist dial and refined metallic strap for a timeless everyday look."},
+  {id: 20,name: "Emerald Dial Luxury Watch",category: "watches",price: 4299,oldPrice: 5299,rating: 4.8,tag: "New",images: [watch2, watch3, watch4, watch5, watch1],description: "A statement luxury watch featuring a rich emerald green dial, polished detailing, and a sophisticated bracelet-style strap."},
+  {id: 21,name: "Crystal Embellished Bracelet Watch",category: "watches",price: 3899,oldPrice: 4799,rating: 4.6,tag: "Trending",images: [watch3, watch4, watch5, watch1, watch2],description: "A graceful bracelet watch adorned with delicate crystal embellishments, designed to add effortless sparkle to festive and evening looks."},
 ];
