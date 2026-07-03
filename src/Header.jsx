@@ -194,10 +194,6 @@ const {
                 {searchOpen ? <X size={20} strokeWidth={1.4} /> : <Search size={20} strokeWidth={1.4} />}
               </button>
             </div>
-
-            <button aria-label="Account" style={{ background: "none", border: "none", color: COLORS.ivory, cursor: "pointer", padding: "10px 8px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <User size={20} strokeWidth={1.4} />
-            </button>
             <button onClick={() => setWishlistOpen(true)} aria-label="Open wishlist" style={{ position: "relative", background: "none", border: "none", color: COLORS.ivory, cursor: "pointer", padding: "10px 8px", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <Heart size={20} strokeWidth={1.4} fill={wishlistCount > 0 ? COLORS.rose : "none"} color={wishlistCount > 0 ? COLORS.rose : COLORS.ivory} />
               {wishlistCount > 0 && (
@@ -247,30 +243,50 @@ const {
       )}
 
       {/* Mobile menu drawer */}
-      {menuOpen && (
-        <div style={{ position: "fixed", inset: 0, zIndex: 97, display: "flex" }}>
-          <div className="jb-slide-left" style={{ width: 280, background: COLORS.surface, height: "100%", padding: 24, borderRight: `1px solid ${COLORS.line}`, display: "flex", flexDirection: "column" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 30 }}>
-              <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 22, color: COLORS.gold, letterSpacing: "0.14em" }}>MENU</span>
-              <button onClick={() => setMenuOpen(false)} style={{ background: "none", border: "none", color: COLORS.ivory, cursor: "pointer" }} aria-label="Close menu"><X size={20} /></button>
-            </div>
-            {CATEGORIES.map((c) => {
-              const CatIcon = Icon(c.icon);
-              return (
-                <a key={c.id} href="#shop" onClick={() => { setCategory(c.id); setMenuOpen(false); }}
-                  style={{ display: "flex", alignItems: "center", gap: 12, padding: "14px 0", borderBottom: `1px solid ${COLORS.line}`, color: COLORS.ivory, textDecoration: "none", fontSize: 15 }}>
-                  {CatIcon && <CatIcon size={17} strokeWidth={1.3} color={COLORS.gold} />}
-                  {c.label}
-                </a>
-              );
-            })}
-            <div style={{ marginTop: "auto", paddingTop: 24, borderTop: `1px solid ${COLORS.line}`, display: "flex", gap: 16 }}>
-              {SITE.social.map((s) => <SocialIcon key={s} type={s} size={18} />)}
-            </div>
-          </div>
-          <div onClick={() => setMenuOpen(false)} style={{ flex: 1, background: "rgba(0,0,0,0.6)" }} />
+    {menuOpen && (
+    <div style={{ position: "fixed", inset: 0, zIndex: 97, display: "flex" }}>
+        <div className="jb-slide-left" style={{ width: 280, background: COLORS.surface, height: "100%", padding: 24, borderRight: `1px solid ${COLORS.line}`, display: "flex", flexDirection: "column" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
+            <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 22, color: COLORS.gold, letterSpacing: "0.14em" }}>MENU</span>
+            <button onClick={() => setMenuOpen(false)} style={{ background: "none", border: "none", color: COLORS.ivory, cursor: "pointer" }} aria-label="Close menu"><X size={20} /></button>
         </div>
-      )}
+
+        {/* Profile row */}
+        <button
+        style={{
+            display: "flex", alignItems: "center", gap: 12,
+            padding: "12px 0 20px", marginBottom: 8,
+            borderTop: "none", borderLeft: "none", borderRight: "none",
+            borderBottom: `1px solid ${COLORS.line}`,
+            background: "none", color: COLORS.ivory, cursor: "pointer",
+            width: "100%", textAlign: "left",
+        }}>
+            <div style={{ width: 38, height: 38, borderRadius: "50%", background: COLORS.surfaceAlt, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+            <User size={18} strokeWidth={1.4} color={COLORS.gold} />
+            </div>
+            <div>
+            <p style={{ fontSize: 14, marginBottom: 2 }}>My account</p>
+            <p style={{ fontSize: 11.5, color: COLORS.muted }}>Sign in or create an account</p>
+            </div>
+        </button>
+
+        {CATEGORIES.map((c) => {
+            const CatIcon = Icon(c.icon);
+            return (
+            <a key={c.id} href="#shop" onClick={() => { setCategory(c.id); setMenuOpen(false); }}
+                style={{ display: "flex", alignItems: "center", gap: 12, padding: "14px 0", borderBottom: `1px solid ${COLORS.line}`, color: COLORS.ivory, textDecoration: "none", fontSize: 15 }}>
+                {CatIcon && <CatIcon size={17} strokeWidth={1.3} color={COLORS.gold} />}
+                {c.label}
+            </a>
+            );
+        })}
+        <div style={{ marginTop: "auto", paddingTop: 24, borderTop: `1px solid ${COLORS.line}`, display: "flex", gap: 16 }}>
+            {SITE.social.map((s) => <SocialIcon key={s} type={s} size={18} />)}
+        </div>
+        </div>
+        <div onClick={() => setMenuOpen(false)} style={{ flex: 1, background: "rgba(0,0,0,0.6)" }} />
+    </div>
+    )}
 
       {/* Cart drawer */}
       <CartDrawer />

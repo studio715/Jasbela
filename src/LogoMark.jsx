@@ -24,7 +24,7 @@ export function LogoLockup({ height = 44 }) {
       <LogoMark size={height} />
       <span style={{
         fontFamily: "'Cormorant Garamond', serif",
-        fontSize: "clamp(16px, 4.5vw, 22px)",
+        fontSize: "clamp(20px, 4.5vw, 22px)",
         letterSpacing: "0.14em",
         color: COLORS.gold,
         fontWeight: 600,
